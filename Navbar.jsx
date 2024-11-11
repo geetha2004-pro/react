@@ -20,13 +20,13 @@ const Navbar = () => {
           Cart
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link active">Disabled</a>
+        <li class="nav-item mt-2 me-2 ms-2">
+        <i class="fa-solid fa-user fa-lg "></i>
         </li>
       </ul>
-      <form class="d-flex" >
+      <form class="d-flex me-3 me-5 ms-2" >
     
-        <button class="btn"type="submit">Search</button>
+      <i class="fa-solid fa-cart-shopping fa-lg"></i>
       </form>
     </div>
   </div>

@@ -1,0 +1,10 @@
+.carousal-images{
+    .carousel-image {
+        width: 300px; 
+        height: 200px; /* Set a fixed height */
+        object-fit: cover; 
+    
+      }
+      
+}
+
