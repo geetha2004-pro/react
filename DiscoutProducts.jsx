@@ -1,13 +1,13 @@
 import React from 'react';
-import DiscountProductsMapping from './DiscountProductsMapping';
-import { discountProducts } from './DiscountProductsData';
 
-const DiscountProducts = () => {
+import { DiscountProductsMapping } from './DiscoutProductsmapping';
+import { discountProductList } from './DiscoutProductList';
+
+ export const DiscountProducts = () => {
   return (
     <div>
-      <DiscountProductsMapping data={discountProducts} />
+      <DiscountProductsMapping data={discountProductList} />
     </div>
   );
 };
-
-export default DiscountProducts;
+ 

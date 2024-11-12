@@ -1,11 +1,11 @@
 import React from 'react';
 
-const DiscountProductsMapping = ({ data = [] }) => {
+ export const DiscountProductsMapping = ({ data = [] }) => {
   return (
     <div>
       {data.map((item) => (
         <div key={item.id} className="product-item">
-          <img src={item.imgUrl} alt={item.productName} className="product-image" />
+          <img src={item.imgUrl} alt={item.productName} className="product-image w-50" />
           <h1>{item.productName}</h1>
           <p>{item.shortDesc}</p>
           <p>Price: ${item.price}</p>
@@ -16,5 +16,5 @@ const DiscountProductsMapping = ({ data = [] }) => {
   );
 };
 
-export default DiscountProductsMapping;
+
 
