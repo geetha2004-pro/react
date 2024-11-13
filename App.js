@@ -7,6 +7,7 @@ import Productdata from './header/Productdata';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';  // Include this for Bootstrap JS functionality
 import Datamapping from './servicedata/Datamapping';
 import { DiscountProducts } from './discountproducts/DiscoutProducts';
+import ProductData from './header/product/ProductData';
 
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
       <Productdata />
       <Datamapping />
       <DiscountProducts />   
+      <ProductData />
+     <ProductData />
       <Footer />
     </div>
     </>
