@@ -3,11 +3,11 @@ import './Datamaping.css';
 
 const Datamaping = ({ productData }) => {
   return (
-    <div id="carouselExampleSlides" className="carousel slide" data-bs-ride="carousel" data-bs-interval="800">
+    <div id="carouselExampleSlides" className=" mb-5 carousel slide" data-bs-ride="carousel" data-bs-interval="800">
       <div className="carousel-inner">
         {productData.map((item, index) => (
           <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={item.id}>
-            <div className="carousel-item-content d-flex justify-content-lg-end align-items-center m-5">
+            <div className="carousel-item-content d-flex justify-content-lg-end align-items-center">
               <img src={item.cover} className="carousel-image" alt={item.title} />
               <div className="carousel-caption text-start mb-5 pb-5">
                 <h5 className="text-black">{item.title}</h5>

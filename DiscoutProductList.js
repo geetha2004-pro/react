@@ -22,7 +22,7 @@ export const discountProductList = [
   {
     id: "08",
     productName: "Baltsar Chair",
-    imgUrl: require('../images/arm-chair-03.jpg'),
+    imgUrl: require('../images/arm-chair-02.jpg'),
     category: "chair",
     price: 89,
     discount: 15,
@@ -32,7 +32,7 @@ export const discountProductList = [
   {
     id: "09",
     productName: "Helmar Chair",
-    imgUrl: require('../images/arm-chair-02.jpg'),
+    imgUrl: require('../images/arm-chair-03.jpg'),
     category: "chair",
     price: 112,
     discount: 35,

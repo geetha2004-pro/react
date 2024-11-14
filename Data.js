@@ -118,7 +118,7 @@ export const discountProductList = [
 ];
 
 
-export const products = [
+export const productList = [
   {
     id: "01",
     productName: "Stone and Beam Westview ",
