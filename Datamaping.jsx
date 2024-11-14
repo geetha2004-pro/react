@@ -1,6 +1,5 @@
-// src/header/Datamaping.js
 import React from 'react';
-import './Datamaping.css'; // Import CSS for styling
+import './Datamaping.css';
 
 const Datamaping = ({ productData }) => {
   return (
@@ -8,7 +7,7 @@ const Datamaping = ({ productData }) => {
       <div className="carousel-inner">
         {productData.map((item, index) => (
           <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={item.id}>
-            <div className="carousal d-flex justify-content-lg-end align-items-center m-5">
+            <div className="carousel-item-content d-flex justify-content-lg-end align-items-center m-5">
               <img src={item.cover} className="carousel-image" alt={item.title} />
               <div className="carousel-caption text-start mb-5 pb-5">
                 <h5 className="text-black">{item.title}</h5>
@@ -19,26 +18,14 @@ const Datamaping = ({ productData }) => {
         ))}
       </div>
       
-      {/* Carousel Controls */}
-      <button
-        className="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleSlides"
-        data-bs-slide="prev"
-      >
+      <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlides" data-bs-slide="prev">
         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Previous</span>
       </button>
-      <button
-        className="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleSlides"
-        data-bs-slide="next"
-      >
+      <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleSlides" data-bs-slide="next">
         <span className="carousel-control-next-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Next</span>
       </button>
-
     </div>
   );
 };

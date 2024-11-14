@@ -5,9 +5,9 @@ import Navbar from './header/Navbar';
 import Footer from './header/Footer';
 import Productdata from './header/Productdata';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';  // Include this for Bootstrap JS functionality
-import Datamapping from './servicedata/Datamapping';
 import { DiscountProducts } from './discountproducts/DiscoutProducts';
-import ProductData from './header/product/ProductData';
+import Serviceproductdata from './servicedata/Serviceproductdata';
+// import ProductData from './header/product/ProductData';
 
 
 function App() {
@@ -16,10 +16,9 @@ function App() {
     <div className="App">
       <Navbar />
       <Productdata />
-      <Datamapping />
+      <Serviceproductdata />
       <DiscountProducts />   
-      <ProductData />
-     <ProductData />
+      {/* <ProductData /> */}
       <Footer />
     </div>
     </>

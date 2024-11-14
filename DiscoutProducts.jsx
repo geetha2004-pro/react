@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { DiscountProductsMapping } from './DiscoutProductsmapping';
 import { discountProductList } from './DiscoutProductList';
 

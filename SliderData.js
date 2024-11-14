@@ -1,10 +1,9 @@
-// src/data/sliderData.js
 export const SliderData = [
     {
         id: 1,
         title: "50% Off For Your First Shopping",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis consequat eu, quam etiam at quis ut convallis.",
-        cover: "../Images/hero-img.png",
+        cover: "./Images/hero-img.png",
        
     },
     {
@@ -25,6 +24,6 @@ export const SliderData = [
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis consequat eu, quam etiam at quis ut convallis.",
         cover: '../Images/watch-07.png',
     },
-    // Add more items as needed
+  
   ];
   

@@ -2,7 +2,7 @@ export const discountProductList = [
   {
     id: "01",
     productName: "Stone and Beam Westview",
-    imgUrl: require('../images/double-sofa-02.png'),
+    imgUrl: require('../images/double-sofa-03.png'),
     category: "sofa",
     price: 193,
     discount: 30,
@@ -12,7 +12,7 @@ export const discountProductList = [
   {
     id: "02",
     productName: "Rivet Bigelow Modern",
-    imgUrl: require('../images/double-sofa-01.png'),
+    imgUrl: require('../images/double-sofa-02.png'),
     category: "sofa",
     price: 253,
     discount: 20,
@@ -22,7 +22,7 @@ export const discountProductList = [
   {
     id: "08",
     productName: "Baltsar Chair",
-    imgUrl: require('../images/double-sofa-03.png'),
+    imgUrl: require('../images/arm-chair-03.jpg'),
     category: "chair",
     price: 89,
     discount: 15,
@@ -42,7 +42,7 @@ export const discountProductList = [
   {
     id: "12",
     productName: "Realme 8",
-    imgUrl: require('../images/counter-timer-img - Copy (2).png'),
+    imgUrl: require('../images/phone-02.jpg'),
     category: "mobile",
     price: 599,
     discount: 10,
@@ -52,7 +52,7 @@ export const discountProductList = [
   {
     id: "13",
     productName: "One Plus Nord",
-    imgUrl: require('../images/arm-chair-03.jpg'),
+    imgUrl: require('../images/phone-04.jpg'),
     category: "mobile",
     price: 799,
     discount: 5,

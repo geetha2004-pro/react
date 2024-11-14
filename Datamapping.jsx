@@ -3,7 +3,7 @@ import React from 'react';
 
 const Datamapping = ({ data=[] }) => {
   return (
-    <div>
+    <div className='d-flex gap-5 m-5'>
       {data.map((item, index) => (
         <div key={index} className="container" style={{ backgroundColor: item.bg }}>
           <div>{item.icon}</div>
