@@ -8,6 +8,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { DiscountProducts } from './discountproducts/DiscoutProducts';
 import Serviceproductdata from './servicedata/Serviceproductdata';
 import ProductData from './header/product/ProductData';
+import ArrivalsData from './arrivals/ArrivalsData';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Productdata />
       <Serviceproductdata />
       <DiscountProducts />   
+      <ArrivalsData />
       <ProductData />
       <Footer />
     </div>
