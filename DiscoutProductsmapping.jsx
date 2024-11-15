@@ -14,6 +14,14 @@ export const DiscountProductsMapping = ({ data = [] }) => {
               </p>
               <img src={item.imgUrl} alt={item.productName} className="product-image" />
               <h3 className="product-name mt-3">{item.productName}</h3>
+              <div className='d-flex'>
+              <i class="fa-solid fa-star text-warning"></i>
+              <i class="fa-solid fa-star text-warning"></i>              
+              <i class="fa-solid fa-star text-warning"></i>
+              <i class="fa-solid fa-star text-warning"></i>
+              <i class="fa-solid fa-star text-warning"></i>
+              <i class="fa-solid fa-star text-warning"></i>
+              </div>
               <div className="d-flex justify-content-between align-items-center p-2">
                 <span className="product-price">${item.price}</span>
                 <span className="text-control">+</span>
