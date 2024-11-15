@@ -1,22 +1,26 @@
-import React from 'react'
+import React from 'react';
+import './Arrivals.css'; // Assuming you have a CSS file for styling
 
-const ArrivalMapping = ({data=[]}) => {
+const ArrivalMapping = ({ data = [] }) => {
   return (
-    <div className='row p-5 border-primary mt-5'>
-        <h1 className='text-center'>Best Arrivals</h1>
-        {
-            data.map((items)=>(
-                <div key={items.id} className="col-md-4 mb-4 border">
-                    <img src={items.imgUrl} alt={items.title}  className='images w-100 '/>
-                    <h1>{items.productName}</h1>
-                    <span className='ps-3 ms-3'>${items.price}</span>
-                    <span className='ps-5 ms-5'>+</span>
-           
-                </div>
-            ))
-        }
+    <div className="container">
+      <h1 className="text-center mt-5 mb-5">Best Arrivals</h1>
+      <div className="row">
+        {data.map((items) => (
+          <div key={items.id} className="col-md-4 mb-4">
+            <div className="product-item">
+              <img src={items.imgUrl} alt={items.productName} className="product-image" />
+              <h3 className="product-name">{items.productName}</h3>
+              <div className="d-flex justify-content-between align-items-center">
+                <span className="product-price">${items.price}</span>
+                <span className="text-control">+</span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default ArrivalMapping
+export default ArrivalMapping;
