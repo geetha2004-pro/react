@@ -1,5 +1,6 @@
 import React from 'react';
 import './Datamaping.css';
+import Serviceproductdata from '../servicedata/Serviceproductdata';
 
 const Datamaping = ({ productData }) => {
   return (
@@ -8,7 +9,7 @@ const Datamaping = ({ productData }) => {
         {productData.map((item, index) => (
           <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={item.id}>
             <div className="carousel-item-content d-flex justify-content-lg-end align-items-center">
-              <img src={item.cover} className="carousel-image pe-5 me-5 w-100" alt={item.title} />
+              <img src={item.cover} className="carousel-image  w-100" alt={item.title} />
              
               <div className="carousel-caption text-start mb-5 pb-5 me-5 pe-5">
                 <h5 className="text-black">{item.title}</h5>
@@ -27,6 +28,7 @@ const Datamaping = ({ productData }) => {
         <span className="carousel-control-next-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Next</span>
       </button>
+      <Serviceproductdata />
     </div>
   );
 };

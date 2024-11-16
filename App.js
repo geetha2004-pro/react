@@ -5,10 +5,9 @@ import Navbar from './header/Navbar';
 import Footer from './header/Footer';
 import Productdata from './header/Productdata';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';  
-import { DiscountProducts } from './discountproducts/DiscoutProducts';
-import Serviceproductdata from './servicedata/Serviceproductdata';
-import ProductData from './header/product/ProductData';
-import ArrivalsData from './arrivals/ArrivalsData';
+import Shop from './shop/Shop';
+import { Route, Routes } from 'react-router-dom';
+
 
 
 function App() {
@@ -16,11 +15,10 @@ function App() {
     <>
     <div className="App">
       <Navbar />
-      <Productdata />
-      <Serviceproductdata />
-      <DiscountProducts />   
-      <ArrivalsData />
-      <ProductData />
+      <Routes>
+        <Route path='shop' element={<Shop />}/>
+        <Route path='productdata' element={<Productdata />} />
+      </Routes>
       <Footer />
     </div>
     </>

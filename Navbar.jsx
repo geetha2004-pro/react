@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 
 
 const Navbar = () => {
@@ -10,13 +12,13 @@ const Navbar = () => {
     <div class="navbar justify-content-end" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="/home"><Link className='nav-link active' to='/productData'>Home</Link></a>
         </li>
         <li class="nav-item" aria-current="page">
-          <a class="nav-link active" href="#">Shop</a>
+          <a class="nav-link active" href="/shop"><Link className='nav-link active' to='shop'>Shop</Link></a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link active"  aria-current="page" href="#">
+          <a class="nav-link active"  aria-current="page" href="/cart">
           Cart
           </a>
         </li>

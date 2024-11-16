@@ -1,19 +1,24 @@
 // src/components/Datamapping.js
 import React from 'react';
+import './Service.css';
+import { DiscountProducts } from '../discountproducts/DiscoutProducts';
 
 const Datamapping = ({ data=[] }) => {
   return (
-    <div className='d-flex gap-3'>
+    <div>
+    <div className='d-flex gap-3 text-center m-5 p-3'>
       {data.map((item, index) => (
         <div key={index} className=" p-2 container" style={{ backgroundColor: item.bg }}>
-          <div>{item.icon}</div>
-          <div>{item.bg}</div>
+          <div className='border bg-white p-2  icons'>{item.icon}</div>
           <h1>{item.title}</h1>
           <p>{item.subtitle}</p>
         </div>
       ))}
+      
+    </div>
+      <DiscountProducts />
     </div>
   );
 };
 
-export default Datamapping;
+export default Datamapping; 

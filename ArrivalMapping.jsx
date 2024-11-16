@@ -1,5 +1,6 @@
 import React from 'react';
 import './Arrivals.css'; // Assuming you have a CSS file for styling
+import ProductData from '../header/product/ProductData';
 
 const ArrivalMapping = ({ data = [] }) => {
   return (
@@ -27,6 +28,7 @@ const ArrivalMapping = ({ data = [] }) => {
           </div>
         ))}
       </div>
+      <ProductData />
     </div>
   );
 };

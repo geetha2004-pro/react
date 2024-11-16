@@ -1,25 +1,25 @@
 
 export const serviceData = [
     {
-      icon: <ion-icon name="car"></ion-icon>,
+      icon: <i class="fa-solid fa-car"></i>,
       title: "Free Shipping",
       subtitle: "Lorem ipsum dolor sit amet.",
       bg: "#fdefe6",
     },
     {
-      icon: <ion-icon name="card"></ion-icon>,
+      icon: <i class="fa-solid fa-credit-card"></i>,
       title: "Safe Payment",
       subtitle: "Lorem ipsum dolor sit amet.",
       bg: "#ceebe9",
     },
     {
-      icon: <ion-icon name="shield-half-outline"></ion-icon>,
+      icon:<i class="fa-solid fa-shield-halved"></i>,
       title: "Secure Payment",
       subtitle: "Lorem ipsum dolor sit amet.",
       bg: "#e2f2b2",
     },
     {
-      icon: <ion-icon name="headset"></ion-icon>,
+      icon:<i class="fa-solid fa-headphones"></i>,
       title: " Back Guarantee",
       subtitle: "Lorem ipsum dolor sit amet.",
       bg: "#d6e5fb",

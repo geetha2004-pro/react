@@ -1,0 +1,116 @@
+.shop-page{
+    background-image: url(https://media.houseandgarden.co.uk/photos/6294943156618cb1641c6da5/4:3/w_2668,h_2001,c_limit/MFOX9870.jpg);
+    height: 200px;
+    
+}
+.navbarr{
+    display: flex;
+  flex-direction: column;
+  justify-content: flex-end; 
+  height: 40vh;
+
+}
+.cards{
+    margin-top: 150px;
+}
+.search{
+    font-size: 20px;
+    padding-top: 13px;
+    margin-left: -30px;
+}
+.category{
+    background-color: rgb(1, 1, 39);
+    color: white;
+    border-radius: 10px;
+}
+.navbar-nav {
+    margin-left: 200px;
+}   
+.searchbar{
+    margin-left: 300px;
+    padding-left:15 px;
+  
+    
+    
+}
+
+
+
+/* Card container */
+.shop-container {
+    display: flex;
+    flex-wrap: wrap; /* Wrap cards to the next row if necessary */
+    gap: 20px; /* Space between cards */
+    padding: 20px;
+    justify-content: center; /* Center align the cards */
+  }
+  
+  /* Individual card */
+  .shop-card {
+    width: 250px; /* Fixed card width */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Clip overflow for a clean look */
+    text-align: center;
+    background-color: #fff; /* White background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 15px;
+  }
+  
+  /* Card image */
+  .shop-card img {
+    width: 100%; /* Full width */
+    height: 150px; /* Fixed height for uniformity */
+    object-fit: cover; /* Maintain image aspect ratio */
+    border-radius: 8px; /* Rounded edges */
+    margin-bottom: 10px;
+  }
+  
+  /* Product name */
+  .shop-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Star ratings */
+  .shop-card .d-flex {
+    display: flex;
+    justify-content: center;
+    gap: 2px; /* Space between stars */
+    margin-bottom: 10px;
+  }
+  
+  /* Price */
+  .shop-card span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px;
+    display: block; /* Ensure price is on its own line */
+  }
+  
+  /* Button */
+  .rouder-circle {
+    border: 1px solid #ddd;
+    border-radius: 50%; /* Round shape */
+    width: 40px;
+    height: 40px;
+    background-color: #f8f9fa;
+    color: #333;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .rouder-circle:hover {
+    background-color: #007bff; /* Change color on hover */
+    color: #fff; /* White text on hover */
+  }
+
+  
