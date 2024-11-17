@@ -3,41 +3,115 @@ import '../discountproducts/Discount.css';
 import ArrivalsData from '../arrivals/ArrivalsData';
 
 export const DiscountProductsMapping = ({ data = [] }) => {
-  const[count,setcount]=useState()
-  const increament=()=>{
-    setcount(count +1)
-  }
-  const amount=()=>{
-    setcount()
-  }
+ 
+  const [selectedProduct, setSelectedProduct] = useState(null); // State to store the selected product
+  const [relatedProducts, setRelatedProducts] = useState([]); // State to store related products
+
+
+  // Handle product click to display its details and related products
+  const handleProductClick = (product) => {
+    setSelectedProduct(product); // Store the clicked product's details
+    const related = data.filter(
+      (item) => item.category === product.category && item.id !== product.id
+    ); // Find products with the same category
+    setRelatedProducts(related); // Store the related products
+  };
+
   return (
-    <div className="container ">
+    <div className="container">
       <h1 className="text-center mt-5 mb-5">Best Discount</h1>
-      <div className="row">
-        {data.map((item) => (
-          <div key={item.id} className="col-md-4 mb-4">
-            <div className="product-item">
-              <p className="bg-dark text-white rounded-pill percentage mt-1 p-2">
-                {item.discount}% off
-              </p>
-              <img src={item.imgUrl} alt={item.productName} className="product-image" />
-              <h3 className="product-name mt-3">{item.productName}</h3>
-              <div className='d-flex'>
-              <i class="fa-solid fa-star text-warning"></i>
-              <i class="fa-solid fa-star text-warning"></i>              
-              <i class="fa-solid fa-star text-warning"></i>
-              <i class="fa-solid fa-star text-warning"></i>
-              <i class="fa-solid fa-star text-warning"></i>
-              <i class="fa-solid fa-star text-warning"></i>
-              </div>
-              <div className="d-flex justify-content-between align-items-center p-2">
-                <span className="product-price" onClick={amount}>${count}{item.price}</span>
-                <button className="text-control" onClick={increament}>+</button>
-              </div>
+
+      {/* Conditionally render selected product details */}
+      {selectedProduct && (
+        <>
+          <h2 className="text-center mt-4">{selectedProduct.productName}</h2>
+          <div className="product-detail d-flex border m-5">
+            <img
+              src={selectedProduct.imgUrl}
+              alt={selectedProduct.productName}
+              className="product-image"
+            />
+            <div className="border p-3">
+              <p>Description: {selectedProduct.shortDesc}</p>
+              <p>{selectedProduct.description}</p>
+              <p>Price: ${selectedProduct.price}</p>
+              <p>Discount: {selectedProduct.discount}% off</p>
+              <p>Category: {selectedProduct.category}</p>
+              <button className="btn btn-primary">Add to Cart</button>
             </div>
           </div>
-        ))}
-      </div>
+
+          {/* Display related products */}
+          <h3 className="text-center mt-4">Related Products</h3>
+          <div className="row">
+            {relatedProducts.map((item) => (
+              <div key={item.id} className="col-md-4 mb-4">
+                <div
+                  className="product-item"
+                  onClick={() => handleProductClick(item)} // Trigger product click handler
+                >
+                  <p className="bg-dark text-white rounded-pill percentage mt-1 p-2">
+                    {item.discount}% off
+                  </p>
+                  <img
+                    src={item.imgUrl}
+                    alt={item.productName}
+                    className="product-image"
+                  />
+                  <h3 className="product-name mt-3">{item.productName}</h3>
+                  <div className="d-flex">
+                    <i className="fa-solid fa-star text-warning"></i>
+                    <i className="fa-solid fa-star text-warning"></i>
+                    <i className="fa-solid fa-star text-warning"></i>
+                    <i className="fa-solid fa-star text-warning"></i>
+                    <i className="fa-solid fa-star text-warning"></i>
+                  </div>
+                  <div className="d-flex justify-content-between align-items-center p-2">
+                    <span className="product-price">${item.price}</span>
+                    <button className="text-control">
+                      +
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
+
+      {/* Display the product list if no product is selected */}
+      {!selectedProduct && (
+        <div className="row">
+          {data.map((item) => (
+            <div key={item.id} className="col-md-4 mb-4">
+              <div
+                className="product-item"
+                onClick={() => handleProductClick(item)} // Trigger product click handler
+              >
+                <p className="bg-dark text-white rounded-pill percentage mt-1 p-2">
+                  {item.discount}% off
+                </p>
+                <img src={item.imgUrl} alt={item.productName} className="product-image" />
+                <h3 className="product-name mt-3">{item.productName}</h3>
+                <div className="d-flex">
+                  <i className="fa-solid fa-star text-warning"></i>
+                  <i className="fa-solid fa-star text-warning"></i>
+                  <i className="fa-solid fa-star text-warning"></i>
+                  <i className="fa-solid fa-star text-warning"></i>
+                  <i className="fa-solid fa-star text-warning"></i>
+                </div>
+                <div className="d-flex justify-content-between align-items-center p-2">
+                  <span className="product-price">${item.price}</span>
+                  <button className="text-control">
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
       <ArrivalsData />
     </div>
   );

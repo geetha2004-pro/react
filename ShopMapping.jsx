@@ -18,8 +18,10 @@ const ShopMapping = ({ data = [] }) => {
                   <i className="fa-solid fa-star text-warning"></i>
                   <i className="fa-solid fa-star text-warning"></i>
                 </div>
-                <span className="card-text fw-bold me-5 ">${product.price}</span>
-                <button className="btn border rounded-circle ms-5">+</button>
+                <div className="d-flex justify-content-between align-items-center">
+                  <span className="card-text fw-bold">${product.price}</span>
+                  <button className="btn border rounded-circle">+</button>
+                </div>
               </div>
             </div>
           </div>
@@ -30,3 +32,4 @@ const ShopMapping = ({ data = [] }) => {
 };
 
 export default ShopMapping;
+

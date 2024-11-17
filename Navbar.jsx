@@ -18,12 +18,10 @@ const Navbar = () => {
           <a class="nav-link active" href="/shop"><Link className='nav-link active' to='shop'>Shop</Link></a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link active"  aria-current="page" href="/cart">
-          Cart
-          </a>
+          <a class="nav-link active"  aria-current="page" href="/cart"><Link className='nav-link active' to='cart'>Cart</Link></a>
         </li>
         <li class="nav-item mt-2 me-2 ms-2">
-        <i class="fa-solid fa-user fa-lg "></i>
+       <Link className='nav-link active' to='/'><i class="fa-solid fa-user fa-lg "></i></Link> 
         </li>
       </ul>
       <form class="d-flex me-3 me-5 ms-2" >
