@@ -13,9 +13,9 @@ const Cart = ({ DiscountProducts = [] }) => {
   // Function to handle updating item quantities in the cart
   const updateCartQuantity = (product, action) => {
     setCart((prevCart) => {
-      const itemIndex = prevCart.findIndex((item) => item.id === product.id);
+      const updatedCart = [...prevCart];
+      const itemIndex = updatedCart.findIndex((item) => item.id === product.id);
 
-      let updatedCart = [...prevCart];
       if (itemIndex !== -1) {
         // If item exists, update quantity
         if (action === "increase") {
@@ -29,7 +29,7 @@ const Cart = ({ DiscountProducts = [] }) => {
         }
       } else if (action === "increase") {
         // If item is not in cart, add it
-        updatedCart = [...prevCart, { ...product, quantity: 1 }];
+        updatedCart.push({ ...product, quantity: 1 });
       }
 
       return updatedCart;
@@ -67,7 +67,7 @@ const Cart = ({ DiscountProducts = [] }) => {
                 className="btn btn-outline-primary cart-btn"
                 onClick={() => updateCartQuantity(item, "decrease")}
               >
-                − {/* Large minus symbol */}
+                - {/* Large minus symbol */}
               </button>
             </div>
           </div>

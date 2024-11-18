@@ -1,21 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Shop.css';
-import ShopDataList from './ShopDataList';
-import { productsList } from './ShopData';
+import ShopDataList from './ShopDataList'; // Assuming this component displays the products
+import { shopproductList } from './DropdownData'; // Updated product list import
+import Dropdowproduct from './Dropdowproduct'; // Correct import for category dropdown
 
 const Shop = () => {
-  // State to manage the search term
+  // State to manage the search term and selected category (default to "sofa")
   const [searchTerm, setSearchTerm] = useState('');
-
-  // Filter products based on the search term
-  const filteredProducts = productsList.filter(product =>
-    product.productName.toLowerCase().includes(searchTerm.toLowerCase()) // Case-insensitive search
-  );
+  const [selectedCategory, setSelectedCategory] = useState('sofa'); // Default category
 
   // Handle search input change
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
+
+  // Handle category change (called from Dropdowproduct)
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
+  };
+
+  // Filter products based on search term and selected category
+  const filteredProducts = (shopproductList || []).filter((product) => {
+    const matchesSearchTerm = product.productName
+      .toLowerCase()
+      .includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory
+      ? product.category.toLowerCase() === selectedCategory.toLowerCase()
+      : true;
+    return matchesSearchTerm && matchesCategory;
+  });
 
   return (
     <div>
@@ -24,38 +37,25 @@ const Shop = () => {
         <nav className="navbar navbarr navbar-expand-lg">
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav">
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle category"
-                  href="/"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Filter by Category
-                </a>
-                <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="/">Sofa</a></li>
-                  <li><a className="dropdown-item" href="/">Chair</a></li>
-                  <li><hr className="dropdown-divider" /></li>
-                  <li><a className="dropdown-item" href="/">Mobile</a></li>
-                </ul>
-              </li>
+              {/* Pass the category change handler to Dropdowproduct */}
+              <Dropdowproduct onCategoryChange={handleCategoryChange} selectedCategory={selectedCategory} />
             </ul>
+            {/* Search bar */}
             <form className="d-flex">
               <input
                 className="form-control searchbar"
                 type="search"
                 placeholder="Search"
-                value={searchTerm} // Bind input value to the search term
-                onChange={handleSearchChange} // Update search term as user types
+                value={searchTerm}
+                onChange={handleSearchChange}
               />
               <i className="fa-solid fa-magnifying-glass text-light-emphasis search"></i>
             </form>
           </div>
         </nav>
       </div>
-      {/* Pass the filtered products to ShopDataList */}
+
+      {/* Pass filtered products to the data display component */}
       <ShopDataList data={filteredProducts} />
     </div>
   );

@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom'
 
 
 
+
 const Navbar = () => {
   return (
+    <>
     <div>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
@@ -32,7 +34,9 @@ const Navbar = () => {
   </div>
 </nav>
     </div>
+  
+    </>
   )
 }
 
-export default Navbar
+export default Navbar 
