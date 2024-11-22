@@ -30,6 +30,7 @@ const ArrivalMapping = ({ data = [] }) => {
               className="product-image me-4"
             />
             <div>
+              
               <h2>{selectedProduct.productName}</h2>
               <p>{selectedProduct.description}</p>
               <p>Price: ${selectedProduct.price}</p>
@@ -76,8 +77,20 @@ const ArrivalMapping = ({ data = [] }) => {
                   alt={item.productName}
                   className="product-image"
                 />
+                 <div className="d-flex">
+                    <i className="fa-solid fa-star text-warning"></i>
+                    <i className="fa-solid fa-star text-warning"></i>
+                    <i className="fa-solid fa-star text-warning"></i>
+                    <i className="fa-solid fa-star text-warning"></i>
+                    <i className="fa-solid fa-star text-warning"></i>
+                  </div>
                 <h3 className="product-name">{item.productName}</h3>
-                <span className="product-price">${item.price}</span>
+                <div className="d-flex justify-content-between align-items-center p-2">
+                    <span className="product-price">${item.price}</span>
+                    <button className="text-control">
+                      +
+                    </button>
+                  </div>
               </div>
             </div>
           ))}

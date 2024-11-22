@@ -29,7 +29,7 @@ const ProductMapping = ({ data = [] }) => {
             />
             <div>
               <h2>{selectedProduct.productName}</h2>
-              <p>{selectedProduct.description}</p>
+              <p><strong>Description:</strong>{selectedProduct.description}</p>
               <p>Price: ${selectedProduct.price}</p>
               <p>Category: {selectedProduct.category}</p>
               <button className="btn btn-primary">Add to Cart</button>
@@ -50,8 +50,15 @@ const ProductMapping = ({ data = [] }) => {
                     alt={relatedItem.productName}
                     className="product-image"
                   />
+                  
                   <h4 className="product-name">{relatedItem.productName}</h4>
-                  <span className="product-price">${relatedItem.price}</span>
+                  <div className="d-flex justify-content-between align-items-center p-2">
+                    <span className="product-price">${relatedItem.price}</span>
+                    <button className="text-control">
+                      +
+                    </button>
+                  </div>
+                  
                 </div>
               </div>
             ))}
@@ -80,7 +87,12 @@ const ProductMapping = ({ data = [] }) => {
                   <i className="fa-solid fa-star text-warning"></i>
                   <i className="fa-solid fa-star text-warning"></i>
                 </div>
-                <span className="product-price">${item.price}</span>
+                <div className="d-flex justify-content-between align-items-center p-2">
+                    <span className="product-price">${item.price}</span>
+                    <button className="text-control">
+                      +
+                    </button>
+                  </div>
               </div>
             </div>
           ))}

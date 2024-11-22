@@ -39,9 +39,9 @@
 }
 
 
-.image{
+/* .image{
     height: 300px;
-}
+} */
 .productlist{
     padding: 50px;
     display: flex;
@@ -93,3 +93,13 @@
   }
   
   
+
+
+
+.details{
+  margin: 150px;
+}
+.product-image{
+  width: 50%;
+  /* border: 1px solid rgb(45, 44, 44) ; */
+}
