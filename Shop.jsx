@@ -47,18 +47,6 @@ const Shop = () => {
     <div>
       <div className="shop-page">
         <h1 className="text-center text-light pt-5">Products</h1>
-        {/* Product image section */}
-        <div className="product-image-section">
-          {/* <img
-            src="https://media.houseandgarden.co.uk/photos/6294943156618cb1641c6da5/4:3/w_2668,h_2001,c_limit/MFOX9870.jpg"
-            alt="Shop"
-            className="shop-image"
-          /> */}
-        </div>
-      </div>
-
-      {/* Bottom section with dropdown and search bar */}
-      <div className="bottom-section">
         <nav className="navbar navbar-expand-lg">
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav">

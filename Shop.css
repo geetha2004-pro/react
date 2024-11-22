@@ -18,7 +18,7 @@
 }
 .search{
     font-size: 20px;
-    padding-top: 13px;
+    /* padding-top: 13px; */
     margin-left: -30px;
 }
 .category{
@@ -27,15 +27,30 @@
     border-radius: 10px;
 }
 .category:hover{
-  background-color: white;
-  color: black;
+  background-color: rgb(100, 39, 198);
+  color: rgb(246, 242, 242);
 }
 .navbar-nav {
+  margin-top: 00px;
     margin-left: 200px;
-}   
+  }   
+  .selectedCategory{
+  background-color: rgb(80, 8, 80);
+
+}
+.collapse{
+  margin-top: 100px;
+  margin-left: 200px;
+}
 .searchbar{
     margin-left: 300px;
-    padding-left:15 px;    
+    padding-left:15 px;  
+      
+}
+.search-icon{
+  border:40px;
+  font-size: large;
+  margin-left: -40px;
 }
 
 
